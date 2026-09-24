@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center ;
+}
+
+header .nave ul {
+    list-style: none;      
+    display: flex;         
+    flex-wrap: wrap;       
+    justify-content: center;
+    gap: 10px;
+    padding: 0px;
+}
+
+
+header img {
+    max-width: 370px;
+    margin: 10px;
+    border-radius: 40px;
+}
+
+header h1{
+    margin: 0px;
+}
+
+header a{
+    color: black;
+    background-color: rgb(55, 58, 230);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header a:hover {
+    background-color: rgb(96, 167, 207);
+}
+
+.contenido {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido .Me {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    font-size: 17px;
+}
+
+.contenido .Me h2 {
+    margin: 0px;
+    background-color: rgb(47, 181, 214);
+    border-radius: 10px;
+    padding: 4px 10px;
+    align-self: flex-start;
+}
+
+.contenido .Me ul {
+    list-style: none;      
+    padding: 0;            
+    display: flex;         
+    flex-wrap: wrap;      
+    gap: 10px;             
+}
+
+.contenido .Me li {
+    background-color: rgb(47, 181, 214);
+    border-radius: 10px;
+    padding: 10px 20px;    
+}
+
+.contenido .Project {
+    margin: 0px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido .Project h3 {
+  
+    background-color: rgb(47, 181, 214);
+    border-radius: 10px;
+    padding: 4px 10px;
+    align-self: flex-start;
+}
+
+.contenido .Project h4 {
+    margin: 0px;
+    background-color: rgb(47, 181, 214);
+    border-radius: 10px;
+    padding: 4px 10px;
+    align-self: flex-start;
+}
+
+
+.contenido .Contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido .Contact h3 {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(47, 181, 214);
+    border-radius: 10px;
+    padding: 4px 10px;
+    align-self: flex-start;
+}
+
+
+
+.contenido .Contact a {
+    text-decoration: none;
+    color: rgb(58, 60, 61);
+    
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(47, 181, 214);
+    color: white;
+}
+
+footer .linked {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}
