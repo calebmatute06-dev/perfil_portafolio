@@ -153,3 +153,14 @@ footer a {
     color: white;
     font-weight: bold;
 }
+
+.oculto {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.visible {
+    opacity: 1;
+    transform: none;
+}
