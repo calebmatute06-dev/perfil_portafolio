@@ -1,28 +1,44 @@
-// ===== Mixins =====
-.columna() {
-    display: flex;
-    flex-direction: column;
+
+.seccion-dos-columnas() {
+    display: grid;
+    grid-template-columns: @col-titulo 1fr;
+    column-gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid @linea;
+
+    > * {
+        grid-column: 2;
+    }
+
+    > h2,
+    > h3 {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+        font-family: @fuente-titulo;
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: @acento;
+    }
+
+    @media (max-width: @bp-movil) {
+        grid-template-columns: 1fr;
+
+        > *,
+        > h2,
+        > h3 {
+            grid-column: 1;
+            grid-row: auto;
+        }
+
+        > h2,
+        > h3 {
+            margin-bottom: 12px;
+        }
+    }
 }
 
-.titulo-seccion() {
-    margin: 0 0 20px;
-    padding-bottom: 8px;
-    font-size: 1.6rem;
-    color: @oscuro;
-    border-bottom: 2px solid @primario;
-    align-self: flex-start;
-}
 
-.chip() {
-    padding: 6px 16px;
-    background-color: @blanco;
-    border: 1px solid @borde;
-    border-radius: 999px;
-    font-size: 0.95rem;
-    color: @texto;
-}
-
-// ===== Clases usadas por animacion.js =====
 .oculto {
     opacity: 0;
     transform: translateY(30px);

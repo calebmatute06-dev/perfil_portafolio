@@ -1,15 +1,18 @@
 header {
-    .columna();
-    align-items: center;
-    padding: 0 24px 70px;
-    background-color: @oscuro;
-    color: @blanco;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    column-gap: 40px;
+    align-items: start;
+    align-content: start;
+    max-width: @ancho-max;
+    margin: 0 auto;
+    padding: 0 24px;
 
     .nave {
-        width: 100%;
-        max-width: @ancho-max;
-        padding: 20px 0 50px;
+        grid-column: 1 / -1;
+        padding: 24px 0;
+        margin-bottom: 48px;
+        border-bottom: 1px solid @linea;
 
         ul {
             list-style: none;
@@ -22,64 +25,85 @@ header {
         }
 
         a {
-            color: #cbd5e1;
+            color: @texto-suave;
             text-decoration: none;
-            font-size: 0.95rem;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-            transition: color 0.2s, border-color 0.2s;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
 
             &:hover {
-                color: @blanco;
-                border-bottom-color: @primario;
+                color: @acento;
             }
         }
     }
 
     img {
-        width: 200px;
-        height: 200px;
+        grid-column: 1;
+        grid-row: 2 / span 3;
+        width: 170px;
+        height: 210px;
         object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid @primario;
-        margin-bottom: 24px;
+        border-radius: 2px;
+        filter: grayscale(20%);
     }
 
     h1 {
-        margin: 0 0 8px;
-        font-size: 2.6rem;
-        letter-spacing: -0.5px;
+        grid-column: 2;
+        margin: 0 0 6px;
+        font-family: @fuente-titulo;
+        font-size: 2.3rem;
+        font-weight: normal;
+        color: @acento;
+        line-height: 1.2;
     }
 
     p {
-        margin: 0 0 28px;
-        font-size: 1.15rem;
-        color: #cbd5e1;
+        grid-column: 2;
+        margin: 0 0 22px;
+        color: @texto-suave;
+        font-size: 1.1rem;
     }
 
-
+    // enlace "Contáctame"
     > a {
-        padding: 12px 28px;
-        background-color: @primario;
-        color: @blanco;
-        border-radius: @radio;
-        font-weight: 600;
+        grid-column: 2;
+        justify-self: start;
+        padding: 9px 22px;
+        color: @acento;
         text-decoration: none;
-        transition: background-color 0.2s;
+        font-size: 0.95rem;
+        border: 1px solid @acento;
+        border-radius: 2px;
+        transition: background-color 0.2s, color 0.2s;
 
         &:hover {
-            background-color: @primario-hover;
+            background-color: @acento;
+            color: @fondo;
         }
     }
 
     @media (max-width: @bp-movil) {
-        h1 {
-            font-size: 1.9rem;
-        }
+        grid-template-columns: 1fr;
 
         .nave ul {
             justify-content: center;
             gap: 18px;
+        }
+
+        img,
+        h1,
+        p,
+        > a {
+            grid-column: 1;
+            grid-row: auto;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
         }
     }
 }

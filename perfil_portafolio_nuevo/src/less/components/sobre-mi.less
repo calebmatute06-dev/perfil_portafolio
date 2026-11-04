@@ -1,25 +1,20 @@
 .contenido .Me {
-    .columna();
-    font-size: 1.05rem;
-
-    h2 {
-        .titulo-seccion();
-    }
-
-    p {
-        margin: 0 0 16px;
-    }
+    .seccion-dos-columnas();
 
     ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        margin: 12px 0 0;
+        gap: 8px;
+        margin: 4px 0 0;
         padding: 0;
     }
 
     li {
-        .chip();
+        padding: 4px 14px;
+        border: 1px solid @linea;
+        border-radius: 2px;
+        font-size: 0.9rem;
+        color: @texto-suave;
     }
 }

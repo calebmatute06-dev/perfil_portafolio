@@ -12,19 +12,25 @@ body {
     margin: 0;
     padding: 0;
     font-family: @fuente;
+    font-size: 1rem;
     color: @texto;
     background-color: @fondo;
     line-height: 1.7;
 }
 
+p {
+    margin: 0 0 14px;
+}
+
 .contenido {
-    .columna();
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
     max-width: @ancho-max;
     margin: 0 auto;
-    padding: 20px 24px 60px;
-    gap: 60px;
+    padding: 48px 24px 72px;
 
     > section {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 24px;
     }
 }
