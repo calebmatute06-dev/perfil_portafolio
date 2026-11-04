@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: @fuente;
+    font-size: 1rem;
+    color: @texto;
+    background-color: @fondo;
+    line-height: 1.7;
+}
+
+p {
+    margin: 0 0 14px;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: @ancho-max;
+    margin: 0 auto;
+    padding: 48px 24px 72px;
+
+    > section {
+        scroll-margin-top: 24px;
+    }
+}
