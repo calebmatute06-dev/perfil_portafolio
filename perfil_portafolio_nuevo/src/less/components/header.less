@@ -1,33 +1,85 @@
 header {
     .columna();
-    margin: 10px;
     align-items: center;
+    padding: 0 24px 70px;
+    background-color: @oscuro;
+    color: @blanco;
+    text-align: center;
 
-    .nave ul {
-        .lista-fila();
-        justify-content: center;
-        gap: 10px;
+    .nave {
+        width: 100%;
+        max-width: @ancho-max;
+        padding: 20px 0 50px;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+
+            &:hover {
+                color: @blanco;
+                border-bottom-color: @primario;
+            }
+        }
     }
 
     img {
-        max-width: 370px;
-        margin: 10px;
-        border-radius: 40px;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid @primario;
+        margin-bottom: 24px;
     }
 
     h1 {
-        margin: 0;
+        margin: 0 0 8px;
+        font-size: 2.6rem;
+        letter-spacing: -0.5px;
     }
 
-    a {
-        color: black;
-        background-color: @azul;
+    p {
+        margin: 0 0 28px;
+        font-size: 1.15rem;
+        color: #cbd5e1;
+    }
+
+
+    > a {
+        padding: 12px 28px;
+        background-color: @primario;
+        color: @blanco;
         border-radius: @radio;
+        font-weight: 600;
         text-decoration: none;
-        padding: 10px;
+        transition: background-color 0.2s;
 
         &:hover {
-            background-color: @azul-hover;
+            background-color: @primario-hover;
+        }
+    }
+
+    @media (max-width: @bp-movil) {
+        h1 {
+            font-size: 1.9rem;
+        }
+
+        .nave ul {
+            justify-content: center;
+            gap: 18px;
         }
     }
 }

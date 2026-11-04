@@ -1,13 +1,35 @@
 .contenido .Contact {
     .columna();
+    font-size: 1.05rem;
 
     h3 {
-        .etiqueta();
+        .titulo-seccion();
+    }
+
+    ul {
+        list-style: none;
         margin: 0;
+        padding: 0;
+        background-color: @blanco;
+        border: 1px solid @borde;
+        border-radius: @radio;
+    }
+
+    li {
+        padding: 14px 24px;
+        border-bottom: 1px solid @borde;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
 
     a {
+        color: @primario;
         text-decoration: none;
-        color: @gris;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

@@ -1,24 +1,28 @@
-
+// ===== Mixins =====
 .columna() {
     display: flex;
     flex-direction: column;
 }
 
-.etiqueta() {
-    background-color: @celeste;
-    border-radius: @radio;
-    padding: 4px 10px;
+.titulo-seccion() {
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    font-size: 1.6rem;
+    color: @oscuro;
+    border-bottom: 2px solid @primario;
     align-self: flex-start;
 }
 
-.lista-fila() {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
+.chip() {
+    padding: 6px 16px;
+    background-color: @blanco;
+    border: 1px solid @borde;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    color: @texto;
 }
 
-
+// ===== Clases usadas por animacion.js =====
 .oculto {
     opacity: 0;
     transform: translateY(30px);

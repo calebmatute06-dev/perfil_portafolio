@@ -1,21 +1,25 @@
 .contenido .Me {
     .columna();
-    margin: 0;
-    font-size: 17px;
+    font-size: 1.05rem;
 
     h2 {
-        .etiqueta();
-        margin: 0;
+        .titulo-seccion();
+    }
+
+    p {
+        margin: 0 0 16px;
     }
 
     ul {
-        .lista-fila();
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
         gap: 10px;
+        margin: 12px 0 0;
+        padding: 0;
     }
 
     li {
-        background-color: @celeste;
-        border-radius: @radio;
-        padding: 10px 20px;
+        .chip();
     }
 }

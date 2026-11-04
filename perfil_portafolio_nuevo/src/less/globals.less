@@ -4,17 +4,27 @@
 
 html {
     min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     min-height: 100vh;
-    font-family: @fuente;
     margin: 0;
     padding: 0;
+    font-family: @fuente;
+    color: @texto;
+    background-color: @fondo;
+    line-height: 1.7;
 }
 
 .contenido {
     .columna();
-    margin: 20px;
-    padding: 10px;
+    max-width: @ancho-max;
+    margin: 0 auto;
+    padding: 20px 24px 60px;
+    gap: 60px;
+
+    > section {
+        scroll-margin-top: 20px;
+    }
 }

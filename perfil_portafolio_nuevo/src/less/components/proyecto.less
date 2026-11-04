@@ -1,14 +1,23 @@
 .contenido .Project {
     .columna();
-    margin: 0;
-    font-size: 17px;
+    font-size: 1.05rem;
 
     h3 {
-        .etiqueta();
+        .titulo-seccion();
     }
 
     h4 {
-        .etiqueta();
+        margin: 24px 0 10px;
+        font-size: 1.2rem;
+        color: @primario;
+    }
+
+    h4 + p {
         margin: 0;
+        padding: 20px 24px;
+        background-color: @blanco;
+        border: 1px solid @borde;
+        border-left: 4px solid @primario;
+        border-radius: @radio;
     }
 }
