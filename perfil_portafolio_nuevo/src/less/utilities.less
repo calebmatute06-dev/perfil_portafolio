@@ -1,0 +1,31 @@
+
+.columna() {
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta() {
+    background-color: @celeste;
+    border-radius: @radio;
+    padding: 4px 10px;
+    align-self: flex-start;
+}
+
+.lista-fila() {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+
+.oculto {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.visible {
+    opacity: 1;
+    transform: none;
+}
